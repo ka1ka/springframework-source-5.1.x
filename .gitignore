@@ -17,6 +17,7 @@ argfile*
 pom.xml
 activemq-data/
 
+**/tagert
 classes/
 /build
 buildSrc/build

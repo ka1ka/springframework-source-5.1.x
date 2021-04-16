@@ -27,5 +27,5 @@
 
 	<bean id="impl" class="com.wb.spring.preparebeanfactory.MyIgnoreInterfaceImpl"/>
 
-	<bean class="com.wb.spring.preparebeanfactory.MyIgnoreAutowiringProcessor" />
+	<bean class="com.wb.spring.preparebeanfactory.MyIgnoreAutowiringProcessor"/>
 </beans>

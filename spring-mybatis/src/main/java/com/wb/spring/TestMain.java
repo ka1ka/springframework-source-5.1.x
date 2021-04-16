@@ -20,8 +20,7 @@ public class TestMain {
 		System.out.println(user);
 
 //		String a = new String("aaa");
-		String a = new String(new char[] {'a','b','c'});
-
+		String a = new String(new char[]{'a', 'b', 'c'});
 
 
 	}

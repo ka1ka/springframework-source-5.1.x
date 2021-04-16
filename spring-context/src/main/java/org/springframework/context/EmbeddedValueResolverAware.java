@@ -28,16 +28,16 @@ import org.springframework.util.StringValueResolver;
  *
  * @author Juergen Hoeller
  * @author Chris Beams
- * @since 3.0.3
  * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#resolveEmbeddedValue(String)
  * @see org.springframework.beans.factory.config.ConfigurableBeanFactory#getBeanExpressionResolver()
  * @see org.springframework.beans.factory.config.EmbeddedValueResolver
+ * @since 3.0.3
  */
 public interface EmbeddedValueResolverAware extends Aware {
 
 	/**
 	 * Set the StringValueResolver to use for resolving embedded definition values.
-	 *
+	 * <p>
 	 * 设置一个值解析器，用来解析环境变量中的占位符信息或者SPEL表达式信息。例如：${name} 或者 #{12*12}
 	 */
 	void setEmbeddedValueResolver(StringValueResolver resolver);

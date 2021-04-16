@@ -7,5 +7,5 @@
 		http://www.592xuexi.com/schema/mytag
 		http://www.592xuexi.com/schema/mytag/mytag.xsd">
 
-	<myname:user id="wb" name="王兵" sex="男" email="110@jd.com" />
+	<myname:user id="wb" name="王兵" sex="男" email="110@jd.com"/>
 </beans>

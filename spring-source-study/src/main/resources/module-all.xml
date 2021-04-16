@@ -9,26 +9,24 @@
 	   default-autowire="byType">
 
 	<!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-		<!--<property name="locations">-->
-			<!--<list>-->
-				<!--<value>classpath:module1.properties</value>-->
-				<!--<value>classpath:module2.properties</value>-->
-			<!--</list>-->
-		<!--</property>-->
-		<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
+	<!--<property name="locations">-->
+	<!--<list>-->
+	<!--<value>classpath:module1.properties</value>-->
+	<!--<value>classpath:module2.properties</value>-->
+	<!--</list>-->
+	<!--</property>-->
+	<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
 	<!--</bean>-->
 
 	<!--<context:component-scan base-package="com.wb.spring.propertyvalue.domain" />-->
 
 	<bean name="user" class="com.wb.spring.propertyvalue.domain.User">
-		<property name="name" value="${user.name}" />
-		<property name="sex" value="${user.sex}" />
+		<property name="name" value="${user.name}"/>
+		<property name="sex" value="${user.sex}"/>
 	</bean>
 
 
-
-
-	<import resource="classpath:module1.xml" />
-	<import resource="classpath:module2.xml" />
+	<import resource="classpath:module1.xml"/>
+	<import resource="classpath:module2.xml"/>
 
 </beans>

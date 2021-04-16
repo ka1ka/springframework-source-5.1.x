@@ -16,9 +16,9 @@
 		</property>
 	</bean>
 
-	<bean id="myProcessor" class="com.wb.spring.xml.MyXmlApplicationContext" />
+	<bean id="myProcessor" class="com.wb.spring.xml.MyXmlApplicationContext"/>
 
-<!--	<import resource="test-${menu.env}.xml" />-->
-	<import resource="test-prod.xml" />
-	<context:annotation-config />
+	<!--	<import resource="test-${menu.env}.xml" />-->
+	<import resource="test-prod.xml"/>
+	<context:annotation-config/>
 </beans>

@@ -9,12 +9,12 @@
 	   default-autowire="byType">
 
 	<!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
-		<!--<property name="locations">-->
-			<!--<list>-->
-				<!--<value>classpath:module1.properties</value>-->
-			<!--</list>-->
-		<!--</property>-->
-		<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
+	<!--<property name="locations">-->
+	<!--<list>-->
+	<!--<value>classpath:module1.properties</value>-->
+	<!--</list>-->
+	<!--</property>-->
+	<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
 	<!--</bean>-->
-	<context:property-placeholder location="classpath:module1.properties" />
+	<context:property-placeholder location="classpath:module1.properties"/>
 </beans>

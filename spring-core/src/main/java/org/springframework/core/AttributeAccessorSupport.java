@@ -50,8 +50,7 @@ public abstract class AttributeAccessorSupport implements AttributeAccessor, Ser
 		if (value != null) {
 			// 如果value值为null不为null，直接设置
 			this.attributes.put(name, value);
-		}
-		else {
+		} else {
 			// 如果name对应的值为null，该属性会被移除
 			removeAttribute(name);
 		}
@@ -85,6 +84,7 @@ public abstract class AttributeAccessorSupport implements AttributeAccessor, Ser
 
 	/**
 	 * Copy the attributes from the supplied AttributeAccessor to this accessor.
+	 *
 	 * @param source the AttributeAccessor to copy from
 	 */
 	protected void copyAttributesFrom(AttributeAccessor source) {

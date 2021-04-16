@@ -46,8 +46,7 @@ public class SpringTransactionAnnotationParser implements TransactionAnnotationP
 				element, Transactional.class, false, false);
 		if (attributes != null) {
 			return parseTransactionAnnotation(attributes);
-		}
-		else {
+		} else {
 			return null;
 		}
 	}
@@ -58,6 +57,7 @@ public class SpringTransactionAnnotationParser implements TransactionAnnotationP
 
 	/**
 	 * 解析事务注解中的属性信息
+	 *
 	 * @param attributes 事务注解对象
 	 * @return 事务注解中的属性信息.
 	 */

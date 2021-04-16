@@ -20,7 +20,7 @@
 	<context:property-placeholder ignore-resource-not-found="true"/>
 	<bean id="listHolder" class="com.wb.spring.preparebeanfactory.ListHolder"/>
 
-	<bean class="com.wb.spring.preparebeanfactory.IgnoreAutowiringProcessor" />
+	<bean class="com.wb.spring.preparebeanfactory.IgnoreAutowiringProcessor"/>
 
 	<!--<context:annotation-config />-->
 </beans>

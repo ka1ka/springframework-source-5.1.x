@@ -9,15 +9,15 @@
 	   default-autowire="byType">
 
 	<!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">-->
-		<!--<property name="locations">-->
-			<!--<list>-->
-				<!--<value>classpath:module2.properties</value>-->
-			<!--</list>-->
-		<!--</property>-->
-		<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
+	<!--<property name="locations">-->
+	<!--<list>-->
+	<!--<value>classpath:module2.properties</value>-->
+	<!--</list>-->
+	<!--</property>-->
+	<!--<property name="ignoreUnresolvablePlaceholders" value="false" />-->
 	<!--</bean>-->
 
-	<context:property-placeholder location="classpath:module2.properties" />
+	<context:property-placeholder location="classpath:module2.properties"/>
 	<context:component-scan base-package="com.wb.spring"
 							annotation-config="true"
 							use-default-filters="false"
@@ -29,5 +29,5 @@
 		<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
 		<context:exclude-filter type="regex" expression=".service.*"/>
 	</context:component-scan>
-	<context:annotation-config />
+	<context:annotation-config/>
 </beans>

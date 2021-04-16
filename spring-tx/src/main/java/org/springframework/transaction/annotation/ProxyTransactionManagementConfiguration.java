@@ -30,15 +30,16 @@ import org.springframework.transaction.interceptor.TransactionInterceptor;
  * necessary to enable proxy-based annotation-driven transaction management.
  *
  * @author Chris Beams
- * @since 3.1
  * @see EnableTransactionManagement
  * @see TransactionManagementConfigurationSelector
+ * @since 3.1
  */
 @Configuration
 public class ProxyTransactionManagementConfiguration extends AbstractTransactionManagementConfiguration {
 
 	/**
 	 * 给容器中注册事务增强器.
+	 *
 	 * @return 容器中的事务增强器
 	 */
 	@Bean(name = TransactionManagementConfigUtils.TRANSACTION_ADVISOR_BEAN_NAME)
@@ -61,6 +62,7 @@ public class ProxyTransactionManagementConfiguration extends AbstractTransaction
 	/**
 	 * 将声明式事务注解@Transactional中的属性解析为一个Bean，并注入到Spring容器中
 	 * 方法中包括了对@Transactional注解中属性的解析操作.
+	 *
 	 * @return 事务注解@Transactional中的注解元数据
 	 */
 	@Bean
@@ -72,6 +74,7 @@ public class ProxyTransactionManagementConfiguration extends AbstractTransaction
 
 	/**
 	 * 创建事务方法对应的方法拦截器
+	 *
 	 * @return 事务方法对应的拦截器
 	 */
 	@Bean

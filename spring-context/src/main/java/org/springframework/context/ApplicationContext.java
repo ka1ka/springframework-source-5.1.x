@@ -60,7 +60,7 @@ public interface ApplicationContext
 		EnvironmentCapable, // 获取bean运行的环境信息
 		ListableBeanFactory, // 支持以列表的形式获取bean
 		HierarchicalBeanFactory, // 用来获取Bean工厂的分层结构
-		MessageSource, 	// 提供对国际化支持的API
+		MessageSource,    // 提供对国际化支持的API
 		ApplicationEventPublisher, // 支持给容器中发布事件，完成事件驱动的功能
 		ResourcePatternResolver { // 用来支持对应用中配置文件的解析工作.
 
@@ -74,35 +74,39 @@ public interface ApplicationContext
 
 	/**
 	 * 获取当前应用的名称。如果没有设置，默认为空字符串
-	 *
+	 * <p>
 	 * Return a name for the deployed application that this context belongs to.
+	 *
 	 * @return a name for the deployed application, or the empty String by default
 	 */
 	String getApplicationName();
 
 	/**
 	 * Return a friendly name for this context.
-	 * @return a display name for this context (never {@code null})
 	 *
+	 * @return a display name for this context (never {@code null})
+	 * <p>
 	 * 获取上下文的名称
 	 */
 	String getDisplayName();
 
 	/**
 	 * 获取容器第一次加载时的时间戳.
-	 *
+	 * <p>
 	 * Return the timestamp when this context was first loaded.
+	 *
 	 * @return the timestamp (ms) when this context was first loaded
 	 */
 	long getStartupDate();
 
 	/**
 	 * 获取当前容器的父容器。
-	 *
-	 *    注意：如果当前容器没有父容器或者当前容器就是父容器，则返回null。
-	 *
+	 * <p>
+	 * 注意：如果当前容器没有父容器或者当前容器就是父容器，则返回null。
+	 * <p>
 	 * Return the parent context, or {@code null} if there is no parent
 	 * and this is the root of the context hierarchy.
+	 *
 	 * @return the parent context, or {@code null} if there is no parent
 	 */
 	@Nullable
@@ -121,11 +125,12 @@ public interface ApplicationContext
 	 * after the application context has been closed.</b> In current Spring Framework
 	 * versions, only refreshable application contexts behave that way; as of 4.2,
 	 * all application context implementations will be required to comply.
+	 *
 	 * @return the AutowireCapableBeanFactory for this context
 	 * @throws IllegalStateException if the context does not support the
-	 * {@link AutowireCapableBeanFactory} interface, or does not hold an
-	 * autowire-capable bean factory yet (e.g. if {@code refresh()} has
-	 * never been called), or if the context has been closed already
+	 *                               {@link AutowireCapableBeanFactory} interface, or does not hold an
+	 *                               autowire-capable bean factory yet (e.g. if {@code refresh()} has
+	 *                               never been called), or if the context has been closed already
 	 * @see ConfigurableApplicationContext#refresh()
 	 * @see ConfigurableApplicationContext#getBeanFactory()
 	 */

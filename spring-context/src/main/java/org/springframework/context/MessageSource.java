@@ -36,9 +36,9 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @see org.springframework.context.support.ResourceBundleMessageSource
  * @see org.springframework.context.support.ReloadableResourceBundleMessageSource
- *
+ * <p>
  * 按照区域信息获取国际化配置文件中的某个值
- *
+ * <p>
  * 国际化使用.
  */
 public interface MessageSource {
@@ -46,10 +46,10 @@ public interface MessageSource {
 	/**
 	 * 根据区域Locale获取国际化配置信息
 	 *
-	 * @param code: 消息编码
-	 * @param args: 消息编码对应的实参内容
+	 * @param code:           消息编码
+	 * @param args:           消息编码对应的实参内容
 	 * @param defaultMessage: 默认消息内容
-	 * @param locale 区域信息
+	 * @param locale          区域信息
 	 */
 	@Nullable
 	String getMessage(String code, @Nullable Object[] args, @Nullable String defaultMessage, Locale locale);
@@ -63,8 +63,7 @@ public interface MessageSource {
 	 * 获取国际化信息
 	 *
 	 * @param resolvable 自定义的消息解析规则。为一个接口，可以自定义消息的编码，解析规则，以及默认的国际化信息内容
-	 * @param locale 国际化区域信息.
-	 *
+	 * @param locale     国际化区域信息.
 	 * @see MessageSourceResolvable#getCodes()
 	 * @see MessageSourceResolvable#getArguments()
 	 * @see MessageSourceResolvable#getDefaultMessage()

@@ -33,10 +33,11 @@ import org.springframework.util.ReflectionUtils;
 
 /**
  * Spring 容器初始化器
- * @HandlesTypes 为tomcat中定义的注解.是在tomcat容器启动时用来加载注解里面指定的类的实现子类，可以传入多个
  *
+ * @HandlesTypes 为tomcat中定义的注解.是在tomcat容器启动时用来加载注解里面指定的类的实现子类，可以传入多个
+ * <p>
  * WebApplicationInitializer的子接口，子类，子抽象类
- *   在Servlet容器启动时都会被以参数传入onStartup的webAppInitializerClasses参数中
+ * 在Servlet容器启动时都会被以参数传入onStartup的webAppInitializerClasses参数中
  */
 @HandlesTypes(value = {WebApplicationInitializer.class})
 // 可以传入多个类型
@@ -45,8 +46,9 @@ public class SpringServletContainerInitializer implements ServletContainerInitia
 
 	/**
 	 * 容器启动的时候会通过SPI机制调用该类的onStartUp方法，并且传入@HandlesTypes(WebApplicationInitializer.class)类型的所有子类作为入参.
-	 * @param webAppInitializerClasses  WebApplicationInitializer类型的所有子类组成的集合
-	 * @param servletContext 应用上下文
+	 *
+	 * @param webAppInitializerClasses WebApplicationInitializer类型的所有子类组成的集合
+	 * @param servletContext           应用上下文
 	 * @throws ServletException
 	 */
 	@Override
@@ -67,8 +69,7 @@ public class SpringServletContainerInitializer implements ServletContainerInitia
 						// 通过反射调用创建传入的类的实例，并且加入到initializers中
 						initializers.add((WebApplicationInitializer)
 								ReflectionUtils.accessibleConstructor(waiClass).newInstance());
-					}
-					catch (Throwable ex) {
+					} catch (Throwable ex) {
 						throw new ServletException("Failed to instantiate WebApplicationInitializer class", ex);
 					}
 				}

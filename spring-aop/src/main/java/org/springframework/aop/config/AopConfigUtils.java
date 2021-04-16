@@ -40,8 +40,8 @@ import java.util.List;
  * @author Rob Harrop
  * @author Juergen Hoeller
  * @author Mark Fisher
- * @since 2.5
  * @see AopNamespaceUtils
+ * @since 2.5
  */
 public abstract class AopConfigUtils {
 
@@ -117,7 +117,7 @@ public abstract class AopConfigUtils {
 
 	/**
 	 * 下面这个方法是给容器中注册一个名称为org.springframework.aop.config.internalAutoProxyCreator，
-	 *   类型为AnnotationAwareAspectJAutoProxyCreator的组件
+	 * 类型为AnnotationAwareAspectJAutoProxyCreator的组件
 	 */
 	@Nullable
 	private static BeanDefinition registerOrEscalateApcAsRequired(

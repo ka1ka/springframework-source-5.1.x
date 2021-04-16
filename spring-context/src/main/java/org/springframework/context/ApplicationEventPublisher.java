@@ -23,12 +23,12 @@ package org.springframework.context;
  *
  * @author Juergen Hoeller
  * @author Stephane Nicoll
- * @since 1.1.1
  * @see ApplicationContext
  * @see ApplicationEventPublisherAware
  * @see org.springframework.context.ApplicationEvent
  * @see org.springframework.context.event.ApplicationEventMulticaster
  * @see org.springframework.context.event.EventPublicationInterceptor
+ * @since 1.1.1
  */
 @FunctionalInterface
 public interface ApplicationEventPublisher {
@@ -42,13 +42,13 @@ public interface ApplicationEventPublisher {
 	 * or even immediate execution at all. Event listeners are encouraged
 	 * to be as efficient as possible, individually using asynchronous
 	 * execution for longer-running and potentially blocking operations.
+	 *
 	 * @param event the event to publish
 	 * @see #publishEvent(Object)
 	 * @see org.springframework.context.event.ContextRefreshedEvent
 	 * @see org.springframework.context.event.ContextClosedEvent
-	 *
+	 * <p>
 	 * 用于向容器中发布通知事件
-	 *
 	 */
 	default void publishEvent(ApplicationEvent event) {
 		publishEvent((Object) event);
@@ -64,10 +64,11 @@ public interface ApplicationEventPublisher {
 	 * or even immediate execution at all. Event listeners are encouraged
 	 * to be as efficient as possible, individually using asynchronous
 	 * execution for longer-running and potentially blocking operations.
+	 *
 	 * @param event the event to publish
-	 * @since 4.2
 	 * @see #publishEvent(ApplicationEvent)
 	 * @see PayloadApplicationEvent
+	 * @since 4.2
 	 */
 	void publishEvent(Object event);
 
